@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Weather Application</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            transition: background 1s ease-in-out;
+            color: #333;
+            overflow: hidden;
+        }
+
+        .weather-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            background-color: #c0c4c0;
+            padding: 20px;
+            border-radius: 10px;
+            height: auto;
+            width: 600px;
+            opacity: .7;
+        }
+
+        .city {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cityNdate {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+        }
+
+        .row-1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            padding: 0 0px;
+            width: 100%;
+        }
+
+        #time {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        #temperature {
+            font-size: 36px;
+            font-weight: bold;
+            color: #000000bd;
+        }
+
+        #is-day {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .whether-tempreture {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+        #weather-icon {
+            width: 100px;
+            height: 100px;
+        }
+
+        #wind-speed {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #2196f3;
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+.wind-icon {
+    width: 40px;
+    height: 40px; 
+    margin-left: -8px;
+}
+
+    </style>
+</head>
+
+<body>
+    <video id="background-video" autoplay muted loop>
+        <source th:src="${videoSource}" type="video/mp4">
+    </video>
+
+    <div class="weather-container">
+        <div class="row-1">
+            <div class="cityNdate">
+                <div class="city" th:text="${data[0]}">City Name</div>
+                <div id="time" th:text="${data[1]}">Current Time</div>
+            </div>
+            <div class="whether-tempreture">
+               <div id="temperature" th:text="${data[2]} + '°C'">Temperature</div>
+                <img id="weather-icon" th:src="${data[4]}" alt="Weather Icon">
+            </div>
+        </div>
+       <div id="wind-speed" th:text="${data[5]} +Kmph">Wind Speed</div>
+       <img src="wind.png" alt="" class="wind-icon">
+
+    </div>
+
+    <script th:inline="javascript">
+        $(document).ready(function () {
+            var isDay = Number(/*[[${data[3]}]]*/);
+            var temperature = Number(/*[[${data[2]}]]*/);
+            var windSpeed = Number(/*[[${data[5]}]]*/);
+
+            if (temperature < 70) {
+                document.body.style.backgroundImage = 'url("ice-background.jpg")';
+                console.log("cold");
+            }
+
+            if (windSpeed > 7) {
+                document.body.style.backgroundImage = 'url("wind-background.jpg")';
+                console.log("very fast")
+            }
+            else
+                console.log("not fast")
+
+                
+            var videoSource;
+            if (isDay == 1&&windSpeed < 4) {
+                videoSource = "day.mp4";
+
+            } 
+            else if(isDay == 1 && windSpeed > 8){
+                videoSource = "fast_wind.mp4";
+            }
+            else if(isDay == 0 && windSpeed > 4){
+                videoSource = "cold_wind.mp4";
+            }
+            else if(isDay == 0 && temperature < 20){
+                videoSource = "cold_night.mp4";
+            }
+            else {
+                videoSource = "night_star.mp4";
+            }
+            document.getElementById('background-video').src = videoSource;
+        });
+    </script>
+</body>
+
+</html>
