@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MovieistApplication<movieist>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "dev.farhan.movieist.MovieistApplication",
+            "projectName": "movieist",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
