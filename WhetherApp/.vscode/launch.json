@@ -9,6 +9,16 @@
             "projectName": "demo",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-WhetherAppApplication<WatchlistApplication>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.abhinav.whether.WhetherAppApplication",
+            "projectName": "WatchlistApplication",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

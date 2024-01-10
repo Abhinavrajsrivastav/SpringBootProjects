@@ -18,7 +18,7 @@
             background-size: cover;
             background-position: center;
             transition: background 1s ease-in-out;
-            color: #333;
+            color: #878787;
             overflow: hidden;
         }
 
@@ -27,7 +27,7 @@
             flex-direction: column;
             justify-content: start;
             align-items: start;
-            background-color: #c0c4c0;
+            background-color: #242724;
             padding: 20px;
             border-radius: 10px;
             height: auto;
@@ -65,7 +65,7 @@
         #temperature {
             font-size: 36px;
             font-weight: bold;
-            color: #000000bd;
+            color: #ccccccbd;
         }
 
         #is-day {
@@ -107,10 +107,12 @@
     margin-left: -8px;
 }
 
+
     </style>
 </head>
 
 <body>
+
     <video id="background-video" autoplay muted loop>
         <source th:src="${videoSource}" type="video/mp4">
     </video>
@@ -118,6 +120,7 @@
     <div class="weather-container">
         <div class="row-1">
             <div class="cityNdate">
+                 <!-- receiceing data from the server using thymeleaf expression -->
                 <div class="city" th:text="${data[0]}">City Name</div>
                 <div id="time" th:text="${data[1]}">Current Time</div>
             </div>
@@ -126,7 +129,7 @@
                 <img id="weather-icon" th:src="${data[4]}" alt="Weather Icon">
             </div>
         </div>
-       <div id="wind-speed" th:text="${data[5]} +Kmph">Wind Speed</div>
+       <div id="wind-speed" th:text="${data[5]} +Mph">Wind Speed</div>
        <img src="wind.png" alt="" class="wind-icon">
 
     </div>
@@ -136,7 +139,16 @@
             var isDay = Number(/*[[${data[3]}]]*/);
             var temperature = Number(/*[[${data[2]}]]*/);
             var windSpeed = Number(/*[[${data[5]}]]*/);
+            var time =  String(/*[[${data[1]}]]*/);
+            var Time = time.split(' ');
+            var time1 = Time[1];
 
+            var parsedDate = new Date(time);
+            var options = { day: 'numeric', month: 'short', year: 'numeric',hour: 'numeric', minute: 'numeric', hour12: true  };
+            var formattedTime = parsedDate.toLocaleDateString('en-US', options);
+            console.log(formattedTime);
+
+            document.getElementById("time").innerHTML = formattedTime;
             if (temperature < 70) {
                 document.body.style.backgroundImage = 'url("ice-background.jpg")';
                 console.log("cold");
