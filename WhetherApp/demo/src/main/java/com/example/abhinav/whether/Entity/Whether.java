@@ -11,6 +11,7 @@ public class Whether {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+    
     @Column(name = "city_name")
     private String cityName;
 

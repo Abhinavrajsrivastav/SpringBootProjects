@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.acknowledge{
+    padding-right: 45px;
+}
+
+.acknowledge h2{
+    font-weight: bold;
+    font-size: 1.7rem;
+    font-family: 'Dancing Script', cursive;
+    color:#300909;
+}

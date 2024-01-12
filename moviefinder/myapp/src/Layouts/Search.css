@@ -1,0 +1,10 @@
+.result {
+    display: flex;
+    flex-wrap: wrap;  /* Allow items to wrap to the next line */
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100vw;
+    padding: 10%;
+}
+
