@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+.container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap: 1rem;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 10%;
+}
+
+.title h2{
+    font-size: 4rem;
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 9rem;
+}
+
+.search input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none; /* Remove the default focus outline */
+}
+
+.search button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none; /* Remove the default focus outline */
+}
+
+/* Add hover effect for the button */
+.search button:hover {
+    background-color: #0056b3;
+}
