@@ -22,7 +22,7 @@
     align-items: center;
     justify-content: center;
     height: auto;
-    width: 9rem;
+    width: 10px;
 }
 
 .search input {
@@ -30,6 +30,10 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none; /* Remove the default focus outline */
+    width: auto;
+    height: auto;
+    font-size: 25px;
+    
 }
 
 .search button {
@@ -40,6 +44,9 @@
     border-radius: 5px;
     cursor: pointer;
     outline: none; /* Remove the default focus outline */
+    font-size: 25px;
+    height: auto;
+    width: auto;
 }
 
 /* Add hover effect for the button */

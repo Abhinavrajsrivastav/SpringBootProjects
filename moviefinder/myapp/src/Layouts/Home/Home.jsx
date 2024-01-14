@@ -29,7 +29,7 @@ const Home = () => {
     //==> await is use to keep wait next line of code until the response is not come 
     const onSubmit = async e => {
         e.preventDefault();
-        await axios.post("http://localhost:8090/", movie);
+        await axios.post("http://localhost:8091/", movie);
         navigate("/Search");
     }
 

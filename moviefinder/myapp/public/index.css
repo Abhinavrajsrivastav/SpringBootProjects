@@ -1,12 +1,13 @@
 body {
-    background: url('./images/forest_img.avif');
-    background-size: cover;
+    /* background: url('./images/forest_img.avif'); */
+    /* background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
+    overflow-y: auto;
+    overflow-x: hidden;
     height: 100vh;
     width: 100vw;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
+    background-color: #0c0e20!important;
 }

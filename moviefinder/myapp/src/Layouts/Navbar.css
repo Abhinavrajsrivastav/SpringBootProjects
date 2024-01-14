@@ -1,12 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+.brand-box{
+    gap: 1rem;
+}
+
+.brand{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.navbarNav{
+    gap: 2rem;
+}
+
 .acknowledge{
     padding-right: 45px;
 }
 
 .acknowledge h2{
     font-weight: bold;
-    font-size: 1.7rem;
-    font-family: 'Dancing Script', cursive;
-    color:#300909;
+    font-size: 16px;
+    /* font-family: 'Dancing Script', cursive; */
+    color: #bece1a;
+}
+
+.custom-heart {
+  color: white;
+  border: 2px solid white;
+  background-color: pink;
+  padding: 5px; /* Adjust padding as needed */
+  
 }
