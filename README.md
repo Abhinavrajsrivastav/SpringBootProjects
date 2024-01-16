@@ -23,11 +23,11 @@
   3. Run the application.
      ```bash
      ./mvnw spring-boot:run
-  4. Open your browser and visit http://localhost:8080 to view the application.
+  4. Open your browser at the mention port number.
 
 # RestApi
 - Description: A RESTful API project.
-- Technologies Used: Node.js, Express.js, MongoDB.
+- Technologies Used: Spring Boot, Core Java, Javascript, HTML, and Bootstrap.
 - Usage:
   1. Clone the repository.
      ```bash
@@ -44,7 +44,7 @@
 
 # StudentManagement_
 - Description: Student management system.
-- Technologies Used: Python, Django, HTML, CSS.
+- Technologies Used: Spring Boot, Java, Java React.js, Bootstrap, HTML and CSS.
 - Usage:
   1. Clone the repository.
      ```bash
@@ -55,4 +55,4 @@
   3. Run the Django development server.
      ```bash
      python manage.py runserver
-  4. Open your browser and visit http://localhost:8000 to view the application.
+  4. Open your browser at the mention port number.
