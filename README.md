@@ -54,5 +54,5 @@
      cd StudentManagement_
   3. Run the Django development server.
      ```bash
-     python manage.py runserver
+     run spring boot server
   4. Open your browser at the mention port number.
