@@ -22,7 +22,6 @@ public class YTC {
     @PostMapping("/seeMovie")
     @CrossOrigin(origins = "http://localhost:3000")
     public String generateYoutubeUrl(@RequestBody Map<String, String> movieName) {
-        // return "Hello";
         return yts.generateYoutubeUrl(movieName.get("movieName"));
     }
 }

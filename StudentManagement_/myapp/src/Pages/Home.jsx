@@ -34,6 +34,7 @@ const Home = () => {
                             <th scope="col">Name</th>
                             <th scope="col">UserName</th>
                             <th scope="col">Email</th>
+                            <th scope="col">Actions</th> {/* New column for actions */}
                         </tr>
                     </thead>
                     <tbody>
@@ -45,9 +46,11 @@ const Home = () => {
                                     <td>{user.username}</td>
                                     <td>{user.email}</td>
                                     <td>
-                                        <Link to={`/viewUser/${user.id}`} className="btn btn-primary mx-2">View</Link>
-                                        <Link to={`/edituser/${user.id}`} className="btn btn-outline-primary mx-2">Edit</Link>
-                                        <button onClick={()=>deleteUser(user.id)} className="btn btn-danger mx-2">Delete</button>
+                                        <div className="flex-row justify-content-around">
+                                            <Link to={`/viewUser/${user.id}`} className="btn btn-primary btn-sm mx-2">View</Link>
+                                            <Link to={`/edituser/${user.id}`} className="btn btn-outline-primary btn-sm mx-2">Edit</Link>
+                                            <button onClick={() => deleteUser(user.id)} className="btn btn-danger btn-sm">Delete</button>
+                                        </div>
                                     </td>
                                 </tr>
                             ))

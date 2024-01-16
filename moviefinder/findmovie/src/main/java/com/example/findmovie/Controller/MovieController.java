@@ -22,17 +22,18 @@ public class MovieController {
     private List storedMovies;
 
     @PostMapping("/")
-    public List searchMovie(@RequestBody Movie movie) {
-        try {
+    public List searchMovie(@RequestBody Movie movie){
+        try{
             storedMovies = movieService.searchMovie(movie.getTitle());
             return storedMovies;
-        } catch (Exception e) {
+        }
+        catch (Exception e){
             return null;
         }
     }
 
     @GetMapping("/Movies")
-    public List getMovies() {
+    public List getMovies(){
         return storedMovies;
     }
 }

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 .brand-box{
     gap: 1rem;
@@ -10,25 +11,26 @@
     gap: 2rem;
 }
 
-.navbarNav{
-    gap: 2rem;
+.navbar-brand{
+    color: white;
+    margin-left: 5px;
+    font-size: 2rem;
+    justify-content: end;
 }
 
-.acknowledge{
-    padding-right: 45px;
+#navbarNav {
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'PT Sans', sans-serif;
 }
 
-.acknowledge h2{
-    font-weight: bold;
-    font-size: 16px;
-    /* font-family: 'Dancing Script', cursive; */
-    color: #bece1a;
+#navbarNav .navbar-nav .nav-item .nav-link{
+    color: white;
 }
 
 .custom-heart {
   color: white;
   border: 2px solid white;
   background-color: pink;
-  padding: 5px; /* Adjust padding as needed */
-  
+  padding: 5px; 
 }
