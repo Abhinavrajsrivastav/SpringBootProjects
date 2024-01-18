@@ -1,25 +1,22 @@
 /* Search.css */
 
-
 .result {
   display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: space-around;
+  flex-direction: column; /* Change to column for mobile */
+  align-items: center; /* Center items for mobile */
   width: 100vw;
 }
 
 .mainVideo {
-  height: 450px;
-  width: 75%;
-  margin: 1% 1% 0% 1%;
+  height: 200px; /* Adjusted height for mobile */
+  width: 100%;
   background-color: rgb(15, 16, 16);
 }
 
 .sideVideo {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center; /* Center items for mobile */
   justify-content: flex-end;
   gap: 1.0rem;
   padding: 1%;
@@ -37,10 +34,51 @@
 }
 
 .side::-webkit-scrollbar-thumb {
-  background-color: #373887; 
-  border-radius: 5px; 
+  background-color: #bcbdef;
+  border-radius: 5px;
 }
 
 .side::-webkit-scrollbar-track {
-  background-color: #3859d1;
+  background-color: #000000;
+}
+
+@media (min-width: 768px) {
+  /* Styles for screens larger than 767px (tablets and desktops) */
+  .result {
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+  }
+
+  .mainVideo {
+    height: 450px;
+    width: 67%;
+    margin: 1% 0% 0% 1%;
+  }
+
+  .sideVideo {
+    align-items: flex-end;
+  }
+}
+
+/* Search.css */
+
+/* ... existing styles ... */
+
+.sideVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items for mobile */
+  justify-content: flex-end;
+  gap: 1.0rem;
+  padding: 1%;
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.sideVideo.visible {
+  transform: translateX(0%);
+}
+
+.sideVideo.hidden {
+  transform: translateX(100%); /* Move the side video off-screen */
 }

@@ -10,49 +10,46 @@ const Search = () => {
   const [id, setId] = useState(null);
   const playerRef = useRef(null);
 
-  
   useEffect(() => {
-  loadMovies();
+    loadMovies();
   }, []);
 
-  
   const loadMovies = async () => {
     try {
       let response = await axios.get("http://localhost:8091/Movies");
       let answer = response.data;
       setMovies(answer);
-      // console.log(response);
     } catch (error) {
       console.error("Error loading movies:", error);
     }
   }
 
-  //giving the size and autoplay
   const opts = {
-    height: '500',
-    width: '920',
+    height: window.innerWidth <= 767 ? '200' : '570',
+    width: '100%',
+    'border-radius': '50px',
     playerVars: {
-    autoplay: 1,
+      autoplay: 1,
     },
   };
 
   return (
     <>
       <div className="result">
-      <div className="mainVideo">
-          {mainVideo ? 
+        <div className="mainVideo">
+          {mainVideo ?
             (<YouTube videoId={id} opts={opts} ref={playerRef} />)
-         : 
-            (<YouTube videoId={id} opts={opts} ref={playerRef} />)
+            :
+            (<YouTube videoId="m3MiaxLMPQk" opts={opts} ref={playerRef} />)
           }
-      </div>
-      <div className="sideVideo">
-      <div className="side">
+        </div>
+        <div className="sideVideo">
+          <div className="side">
             {movies.map((movie) => (
               <MovieDetail movie={movie} key={movie.id} setMainVideo={setMainVideo} setId={setId} />
             ))}
-      </div>
-      </div>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -38,7 +38,7 @@ return (
     value={title}
     onChange={(e) => onInputChange(e)}
     />
-    <button className="btn bg-primary">Search</button>
+    <button className="btn bg-success">Search</button>
   </div>
   </form>
 
