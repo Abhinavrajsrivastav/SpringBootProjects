@@ -40,7 +40,7 @@ const Search = () => {
           {mainVideo ?
             (<YouTube videoId={id} opts={opts} ref={playerRef} />)
             :
-            (<YouTube videoId="m3MiaxLMPQk" opts={opts} ref={playerRef} />)
+            (<YouTube videoId="" opts={opts} ref={playerRef} />)
           }
         </div>
         <div className="sideVideo">
