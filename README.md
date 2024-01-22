@@ -56,3 +56,15 @@
      ```bash
      run spring boot server
   4. Open your browser at the mention port number.
+
+
+  # MovieFinder(View)
+- Description: This project will help to find any movie.
+- Technologies Used: Java, Spring Boot, Javacript, React.Js, Google Cloud, OMDB API.
+- Usage:
+  1. Clone the repository.
+     ```bash
+     https://github.com/Abhinavrajsrivastav/SpringBootProjects.git
+  2. Navigate to the Project and run it:
+     ``` ✨
+     
