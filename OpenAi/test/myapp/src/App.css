@@ -1,0 +1,135 @@
+.app-container {
+  max-height: 50vh; /* Add this line */
+  width: 40vw;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-feild {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+input {
+  font-size: 16px; /* Adjusted font size */
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 10px;
+  color: black;
+  font-weight: bold;
+  border: 2px solid #8707ff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  background: white;
+  width: 500px;
+}
+
+.input:active {
+  box-shadow: 2px 2px 15px #8707ff inset;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #530b4e;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out all;
+}
+
+.btn {
+  border: none;
+  width: 10em;
+  height: 3em;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #1c1a1c;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+}
+
+.sparkle {
+  fill: #aaaaaa;
+  transition: all 800ms ease;
+}
+
+.text {
+  font-weight: 600;
+  color: #aaaaaa;
+  font-size: medium;
+}
+
+.btn:hover {
+  background: linear-gradient(0deg, #a47cf3, #683fea);
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+    inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 0px 4px rgba(255, 255, 255, 0.2),
+    0px 0px 180px 0px #9917ff;
+  transform: translateY(-2px);
+}
+
+.btn:hover .text {
+  color: white;
+}
+
+.btn:hover .sparkle {
+  fill: white;
+  transform: scale(1.2);
+}
+
+.response-container {
+  width: auto;
+  max-height: 50vh;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #455de1;
+  text-align: left;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.response-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.response-content {
+  width: auto;
+  white-space: pre-line;
+  height: 50vh;
+  overflow-y: scroll;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.response-content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.response-content::-webkit-scrollbar-thumb {
+  background-color: #530b4e;
+  border-radius: 10px;
+}
+
+.response-content::-webkit-scrollbar-track {
+  background-color: #1c1a1c;
+  border-radius: 10px;
+}

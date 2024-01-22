@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ChatgptBotApplication<chatgpt-bot>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.javatechie.ChatgptBotApplication",
+            "projectName": "chatgpt-bot",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
