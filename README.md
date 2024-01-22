@@ -65,6 +65,5 @@
   1. Clone the repository.
      ```bash
      https://github.com/Abhinavrajsrivastav/SpringBootProjects.git
-  2. Navigate to the Project and run it:
-     ``` ✨
+  ✨
      
