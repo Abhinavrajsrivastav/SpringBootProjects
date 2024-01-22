@@ -18,7 +18,7 @@ import aj.org.objectweb.asm.TypeReference;
 @Repository
 public class MovieService {
 
-    private final String api = "https://www.omdbapi.com/?i=tt3896198&apikey=44cdfdd3&s=";
+    private final String api = "https://www.omdbapi.com/?i=tt3896198&apikey=&s=";
 
     public List searchMovie(String title) {
         // import other necessary import
