@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Service
 public class YTS {
 
-    private final String API_KEY = "AIzaSyCDHej1UCOZX-ODRIL7P1lhjhLuY-Saz7M";
+    private final String API_KEY = "";
     private final String API_URL = "https://www.googleapis.com/youtube/v3/search";
 
     public String getVideoId(String movieName) {
