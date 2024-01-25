@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 550px;
+  gap: 5px;
+}
+
+.suggestion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid #4b92ffd1;
+  background-color: #1d244945;
+  border-radius: 5px;
+  padding: 1px;
+  padding-left: 17px;
+  transition: .3s ease-in-out all;
+}
+
+
+.text p {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+}
+
+.btns{
+    margin: 5px 5px 0 0;
+}
+
+.button {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0px;
+  cursor: pointer;
+  outline: 0px;
+  padding: 0 2px;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  opacity: 0;
+  transition: 0.3s ease-in-out all;
+}
+
+.suggestion:hover .button {
+  opacity: 1;
+  background-color: #25359145;
+}
+
+.suggestion:hover {
+  background-color: #25359145;
+}
+
+.button:hover ~ .backdrop {
+  top: 48%;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transform: rotate(15deg) translateX(-50%) translateY(-50%);
+}
+
+.button:active,
+.button:active ~ .backdrop {
+  box-shadow: none;
+}
