@@ -13,7 +13,7 @@ import com.example.findmovie.Model.Movie;
 import com.example.findmovie.Service.MovieService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://spring-boot-projects-b4zh5bwz7-abhinavrajsrivastav.vercel.app/")
 public class MovieController {
 
     @Autowired

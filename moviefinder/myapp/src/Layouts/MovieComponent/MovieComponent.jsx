@@ -15,7 +15,7 @@ const MovieDetail = ({ movie, setMainVideo, setId }) => {
     console.log(movie.Title);
     try {
   const response = await axios.post(
-    "http://localhost:8091/seeMovie",
+    "https://spring-boot-projects-2wjl-idu8dbnl7-abhinavrajsrivastav.vercel.app/seeMovie",
     { movieName: movie.Title },
     {headers: {'Content-Type': 'application/json',}}
     );

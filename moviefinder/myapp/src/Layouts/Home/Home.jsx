@@ -19,7 +19,7 @@ const Home = () => {
 
   const onSubmit = async e => {
         e.preventDefault();
-        await axios.post("http://localhost:8091/", movie);
+        await axios.post("https://spring-boot-projects-2wjl-idu8dbnl7-abhinavrajsrivastav.vercel.app/", movie);
         navigate("/Search");
   }
 
