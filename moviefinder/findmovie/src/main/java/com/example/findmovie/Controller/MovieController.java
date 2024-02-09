@@ -36,4 +36,9 @@ public class MovieController {
     public List getMovies(){
         return storedMovies;
     }
+
+    @PostMapping("/hello")
+    public String Hell(){
+        return "Hello";
+    }
 }
