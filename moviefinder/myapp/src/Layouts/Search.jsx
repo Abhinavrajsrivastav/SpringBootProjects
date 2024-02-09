@@ -16,7 +16,7 @@ const Search = () => {
 
   const loadMovies = async () => {
     try {
-      let response = await axios.get("https://spring-boot-projects-2wjl-idu8dbnl7-abhinavrajsrivastav.vercel.app/Movies");
+      let response = await axios.get("https://spring-boot-projects-2wjl-git-main-abhinavrajsrivastav.vercel.app/Movies");
       let answer = response.data;
       setMovies(answer);
     } catch (error) {
